@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "generador-logs-pruebas"
+version = "0.1.0"
+description = "Generador de logs de pruebas: operaciones ficticias con verdad conocida, en días de mercado reales, en formato ATAS"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["tzdata>=2024.1"]
+
+[project.scripts]
+generador-logs-pruebas = "testeo_historico.cli:main"
+
+[tool.setuptools]
+packages = ["testeo_historico"]

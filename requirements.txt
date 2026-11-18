@@ -1,0 +1,5 @@
+# Ejecución
+tzdata>=2024.1               # Windows no trae la base de zonas horarias: sin ella zoneinfo no encuentra America/New_York ni Europe/Madrid
+
+# Tests (python -m pytest -q)
+pytest>=8.0

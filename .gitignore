@@ -1,0 +1,23 @@
+# Cachés y construcción
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+
+# Lo que genera el propio proyecto al usarlo
+verdad.json
+salida/
+
+# Nunca credenciales ni secretos
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*credencial*
+*credential*
+*service*account*

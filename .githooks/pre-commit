@@ -1,0 +1,9 @@
+#!/bin/sh
+# Pre-commit: bloquea el commit si el escáner encuentra credenciales o datos personales (nunca imprime el valor).
+# Se activa UNA vez por clon:   git config core.hooksPath .githooks
+cd "$(git rev-parse --show-toplevel)" || exit 1
+if command -v python >/dev/null 2>&1; then PY=python; else PY="py -3"; fi
+$PY herramientas/comprobar_secretos.py || {
+    echo "Commit bloqueado: quita lo que marca el escáner (ver arriba) y vuelve a intentarlo."
+    exit 1
+}
